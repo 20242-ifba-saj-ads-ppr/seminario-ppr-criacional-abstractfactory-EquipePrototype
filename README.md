@@ -79,13 +79,13 @@ class AppleWatch {
 
 Actor --> IDeviceFactory
 
-IDeviceFactory --|> AndroidFactory
-IDeviceFactory --|> AppleFactory
+IDeviceFactory --> AndroidFactory
+IDeviceFactory --> AppleFactory
 
-AndroidFactory --|> IWatch
-AppleFactory --|> IWatch
-AndroidFactory --|> IPhone
-AppleFactory --|> IPhone
+AndroidFactory --> IWatch
+AppleFactory --> IWatch
+AndroidFactory --> IPhone
+AppleFactory --> IPhone
 
 IWatch --> AppleWatch 
 IWatch --> AndroidWatch
